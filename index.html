@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odisha School Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+       <!-- Header with Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-school"></i>
+                <h1>Odisha <span>School</span> Finder</h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#"><i class="fas fa-search"></i> Find Schools</a></li>
+                    <li><a href="#"><i class="fas fa-star"></i> Top Schools</a></li>
+                    <li><a href="#"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Find the Best Schools in Odisha</h2>
+                <p>Discover top educational institutions across all districts of Odisha with our comprehensive school directory</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Schools</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30</span>
+                        <span class="stat-label">Districts</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Education Boards</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search Section -->
+        <section class="search-section">
+            <h2 class="section-title">Find Your Perfect School</h2>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by school name...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="cityFilter">City:</label>
+                    <select id="cityFilter">
+                        <option value="">All Cities</option>
+                        <option value="Bhubaneswar">Bhubaneswar</option>
+                        <option value="Cuttack">Cuttack</option>
+                        <option value="Puri">Puri</option>
+                        <option value="Rourkela">Rourkela</option>
+                        <option value="Sambalpur">Sambalpur</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="boardFilter">Education Board:</label>
+                    <select id="boardFilter">
+                        <option value="">All Boards</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="ICSE">ICSE</option>
+                        <option value="State">State Board</option>
+                        <option value="IB">International Baccalaureate</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="typeFilter">School Type:</label>
+                    <select id="typeFilter">
+                        <option value="">All Types</option>
+                        <option value="Public">Public</option>
+                        <option value="Private">Private</option>
+                    </select>
+                </div>
+                
+                <button id="resetFilters" class="reset-btn"><i class="fas fa-redo"></i> Reset Filters</button>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="results-section">
+            <div class="results-header">
+                <div id="resultsCount" class="results-count">25 schools found</div>
+                <div class="sort-options">
+                    <label for="sortFilter">Sort by:</label>
+                    <select id="sortFilter">
+                        <option value="name">Name (A-Z)</option>
+                        <option value="rating">Rating</option>
+                        <option value="location">Location</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="schoolsList" class="schools-list">
+                <!-- Sample School Cards -->
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-badge"><i class="fas fa-star"></i> 4.8</div>
+                        <h3 class="school-name">D.A.V. Public School</h3>
+                        <div class="school-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bhubaneswar, Khordha</span>
+                        </div>
+                    </div>
+                    <div class="school-details">
+                        <div class="school-info">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>CBSE</span>
+                        </div>
+                        <div class="school-info">
+                            <i class="fas fa-building"></i>
+                            <span>Private</span>
+                        </div>
+                        <div class="school-info">
+                            <i class="fas fa-phone"></i>
+                            <span>0674-2531001</span>
+                        </div>
+                        <button class="view-more-btn"><i class="fas fa-info-circle"></i> View More Details</button>
+                    </div>
+                </div>
+                
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-badge"><i class="fas fa-star"></i> 4.6</div>
+                        <h3 class="school-name">St. Joseph's High School</h3>
+                        <div class="school-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cuttack</span>
+                        </div>
+                    </div>
+                    <div class="school-details">
+                        <div class="school-info">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>ICSE</span>
+                        </div>
+                        <div class="school-info">
+                            <i class="fas fa-building"></i>
+                            <span>Private</span>
+                        </div>
+                        <div class="school-info">
+                            <i class="fas fa-phone"></i>
+                            <span>0671-2305452</span>
+                        </div>
+                        <button class="view-more-btn"><i class="fas fa-info-circle"></i> View More Details</button>
+                    </div>
+                </div>
+                
+                <div class="school-card">
+                    <div class="school-header">
+                        <div class="school-badge"><i class="fas fa-star"></i> 4.7</div>
+                        <h3 class="school-name">Sainik School</h3>
+                        <div class="school-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bhubaneswar, Khordha</span>
+                        </div>
+                    </div>
+                    <div class="school-details">
+                        <div class="school-info">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>CBSE</span>
+                        </div>
+                        <div class="school-info">
+                            <i class="fas fa-building"></i>
+                            <span>Public</span>
+                        </div>
+                        <div class="school-info">
+                            <i class="fas fa-phone"></i>
+                            <span>0674-2582181</span>
+                        </div>
+                        <button class="view-more-btn"><i class="fas fa-info-circle"></i> View More Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Place this below your schoolsList container -->
+            <div id="showMoreContainer"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Odisha School Finder is a comprehensive platform helping parents and students discover the best educational institutions across Odisha.</p>
+                    <div class="social-links">
+                       <a href="https://portfolio-daxin.netlify.app/"><i class="fas fa-globe"></i></a>
+                        <a href="https://x.com/tudu_dakhin"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/daxin_tudu/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/dakhin-tudu-b3550821b/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i> Find Schools</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i> Top Rated Schools</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Admission Guidance</a></li>
+                        <li><a href="#"><i class="fas fa-newspaper"></i> Education News</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Popular Cities</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-city"></i> Schools in Bhubaneswar</a></li>
+                        <li><a href="#"><i class="fas fa-city"></i> Schools in Cuttack</a></li>
+                        <li><a href="#"><i class="fas fa-city"></i> Schools in Puri</a></li>
+                        <li><a href="#"><i class="fas fa-city"></i> Schools in Rourkela</a></li>
+                        <li><a href="#"><i class="fas fa-city"></i> Schools in Sambalpur</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Education Street, Bhubaneswar, Odisha</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>dtudu195@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Odisha School Finder. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- School Details Modal -->
+    <div id="schoolModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
